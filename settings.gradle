@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Google Admob Ads Calling Of Class Throw"
 include ':app'
+include ':nativetemplates'
