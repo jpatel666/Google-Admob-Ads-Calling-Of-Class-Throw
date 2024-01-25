@@ -15,17 +15,17 @@ import com.iw.googleadmobadscallingofclassthrow.R;
 public class BannerAdsUtils {
     AdView adView;
     private boolean initialLayoutComplete = false;
-    Activity showBannerAdsActivity;
+    Activity activity;
     LinearLayout adContainerView;
 
-    public BannerAdsUtils(Activity showBannerAdsActivity, LinearLayout adContainerView) {
+    public BannerAdsUtils(Activity activity, LinearLayout adContainerView) {
 
-        this.showBannerAdsActivity = showBannerAdsActivity;
+        this.activity = activity;
         this.adContainerView = adContainerView;
     }
 
     public void bannerAdaptive() {
-        adView = new AdView(showBannerAdsActivity);
+        adView = new AdView(activity);
         adContainerView.addView(adView);
 
         adContainerView.getViewTreeObserver().addOnGlobalLayoutListener(
@@ -41,7 +41,7 @@ public class BannerAdsUtils {
     }
 
     private void loadBanner() {
-        adView.setAdUnitId(showBannerAdsActivity.getString(R.string.banner_id));
+        adView.setAdUnitId(activity.getString(R.string.banner_id));
 
         AdSize adSize = getAdSize();
         adView.setAdSize(adSize);
@@ -56,7 +56,7 @@ public class BannerAdsUtils {
 
     @SuppressLint({"NewApi", "LocalSuppress"})
     private AdSize getAdSize() {
-        WindowMetrics windowMetrics = showBannerAdsActivity.getWindowManager().getCurrentWindowMetrics();
+        WindowMetrics windowMetrics = activity.getWindowManager().getCurrentWindowMetrics();
         Rect bounds = windowMetrics.getBounds();
 
         float adWidthPixels = adContainerView.getWidth();
@@ -65,10 +65,10 @@ public class BannerAdsUtils {
             adWidthPixels = bounds.width();
         }
 
-        float density = showBannerAdsActivity.getResources().getDisplayMetrics().density;
+        float density = activity.getResources().getDisplayMetrics().density;
         int adWidth = (int) (adWidthPixels / density);
 
-        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(showBannerAdsActivity, adWidth);
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(activity, adWidth);
     }
 
 }
