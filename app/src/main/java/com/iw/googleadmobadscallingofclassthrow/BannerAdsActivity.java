@@ -6,14 +6,14 @@ import android.os.Bundle;
 
 import com.iw.googleadmobadscallingofclassthrow.AdsClass.BannerAdsUtils;
 
-public class ShowBannerAdsActivity extends AppCompatActivity {
+public class BannerAdsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_banner_ads);
+        setContentView(R.layout.activity_banner_ads);
 
-        BannerAdsUtils bannerAdsUtils = new BannerAdsUtils(ShowBannerAdsActivity.this,findViewById(R.id.linearAdaptive));
+        BannerAdsUtils bannerAdsUtils = new BannerAdsUtils(BannerAdsActivity.this,findViewById(R.id.linearAdaptive));
         bannerAdsUtils.bannerAdaptive();
 
     }

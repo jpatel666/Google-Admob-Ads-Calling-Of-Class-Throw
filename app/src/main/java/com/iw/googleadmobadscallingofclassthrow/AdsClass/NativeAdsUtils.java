@@ -1,7 +1,6 @@
 package com.iw.googleadmobadscallingofclassthrow.AdsClass;
 
 import android.app.Activity;
-import android.view.View;
 
 import com.google.android.ads.nativetemplates.NativeTemplateStyle;
 import com.google.android.ads.nativetemplates.TemplateView;
@@ -9,7 +8,6 @@ import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.iw.googleadmobadscallingofclassthrow.R;
-import com.iw.googleadmobadscallingofclassthrow.ShowNativeAdsActivity;
 
 public class NativeAdsUtils {
 

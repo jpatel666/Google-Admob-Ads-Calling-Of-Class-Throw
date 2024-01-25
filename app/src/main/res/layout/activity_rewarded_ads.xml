@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowNativeAdsActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".RewardedAdsActivity">
 
-    <com.google.android.ads.nativetemplates.TemplateView
-        android:id="@+id/my_template"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:gnt_template_type="@layout/gnt_medium_template_view" />
+    <Button
+        android:id="@+id/btnRewardedads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Rewarded Ads"/>
+
+
 
 </LinearLayout>
