@@ -27,7 +27,7 @@ public class InterAdsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(InterAdsActivity.this, BannerAdsActivity.class);
                 InterAdsUtils interAdsUtils = new InterAdsUtils(InterAdsActivity.this);
-                interAdsUtils.loadInter(intent,true);
+                interAdsUtils.loadInter(intent, true);
                 //putExtra,Data,...etc...[Code Here]
                 //startActivity(intent);...[No]...[InterAdsUtils Class...Code Here]
             }
@@ -38,7 +38,7 @@ public class InterAdsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(InterAdsActivity.this, BannerAdsActivity.class);
                 InterAdsUtils interAdsUtils = new InterAdsUtils(InterAdsActivity.this);
-                interAdsUtils.loadInter(intent,true);
+                interAdsUtils.loadInter(intent, true);
                 //putExtra,Data,...etc...[Code Here]
                 //startActivity(intent);...[No]...[InterAdsUtils Class...Code Here]
             }
@@ -49,7 +49,7 @@ public class InterAdsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(InterAdsActivity.this, BannerAdsActivity.class);
                 InterAdsUtils interAdsUtils = new InterAdsUtils(InterAdsActivity.this);
-                interAdsUtils.loadInter(intent,true);
+                interAdsUtils.loadInter(intent, true);
                 //putExtra,Data,...etc...[Code Here]
                 //startActivity(intent);...[No]...[InterAdsUtils Class...Code Here]
             }

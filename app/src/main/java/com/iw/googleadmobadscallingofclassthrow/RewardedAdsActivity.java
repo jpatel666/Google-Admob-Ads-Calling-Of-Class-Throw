@@ -1,10 +1,10 @@
 package com.iw.googleadmobadscallingofclassthrow;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.iw.googleadmobadscallingofclassthrow.AdsClass.RewardedAdsUtils;
 
