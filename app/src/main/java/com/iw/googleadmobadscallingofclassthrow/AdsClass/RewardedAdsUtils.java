@@ -13,6 +13,7 @@ import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.iw.googleadmobadscallingofclassthrow.R;
+import com.kaopiz.kprogresshud.KProgressHUD;
 
 public class RewardedAdsUtils {
 
@@ -26,18 +27,27 @@ public class RewardedAdsUtils {
 
     public void loadReward() {
 
+        KProgressHUD hud = KProgressHUD.create(activity)
+                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+                .setLabel("Please wait")
+                .setCancellable(false)
+                .setAnimationSpeed(2)
+                .setDimAmount(0.5f)
+                .show();
+
         AdRequest adRequest = new AdRequest.Builder().build();
         RewardedAd.load(activity, activity.getResources().getString(R.string.rewarded_id),
                 adRequest, new RewardedAdLoadCallback() {
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                         rewardedAd = null;
+                        hud.dismiss();
                     }
 
                     @Override
                     public void onAdLoaded(@NonNull RewardedAd ad) {
                         rewardedAd = ad;
-
+                        hud.dismiss();
                         rewardedAd.show(activity, new OnUserEarnedRewardListener() {
                             @Override
                             public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
